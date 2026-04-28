@@ -1,4 +1,7 @@
 ---
+import { Image } from 'astro:assets';
+import logoImage from '../assets/logo.jpg';
+
 const navLinks = [
   { href: "/", label: "Startseite" },
   { href: "/leistungen", label: "Leistungen" },
@@ -14,11 +17,13 @@ const currentPath = Astro.url.pathname;
     <div class="flex h-20 items-center justify-between">
       <!-- Logo -->
       <a href="/" class="flex items-center group shrink-0" aria-label="Montagebau Fabian - Zur Startseite">
-        <img 
-          src="/logo.jpg" 
+        <Image 
+          src={logoImage} 
           alt="Montagebau Fabian Logo" 
           class="h-12 md:h-14 w-auto max-w-[200px] md:max-w-[260px] object-contain transition-transform duration-300 group-hover:scale-[1.02]"
+          width={400}
           loading="eager"
+          densities={[1, 2]} decoding="async"
         />
       </a>
 
@@ -69,6 +74,12 @@ const currentPath = Astro.url.pathname;
 
   <!-- Mobile Menu -->
   <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-border">
+    <noscript>
+      <style>
+        #mobile-menu { display: block !important; }
+        #mobile-menu-btn { display: none !important; }
+      </style>
+    </noscript>
     <div class="px-4 py-4 space-y-2">
       {navLinks.map((link) => (
         <a

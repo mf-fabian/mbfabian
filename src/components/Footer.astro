@@ -1,4 +1,7 @@
 ---
+import { Image } from 'astro:assets';
+import logoImage from '../assets/logo.jpg';
+
 const currentYear = new Date().getFullYear();
 ---
 
@@ -10,11 +13,13 @@ const currentYear = new Date().getFullYear();
       <div class="space-y-4">
         <a href="/" class="inline-block group" aria-label="Montagebau Fabian - Zur Startseite">
           <div class="bg-white rounded-xl p-3 shadow-lg">
-            <img 
-              src="/logo.jpg" 
+            <Image 
+              src={logoImage} 
               alt="Montagebau Fabian Logo" 
               class="h-10 w-auto max-w-[160px] object-contain"
+              width={300}
               loading="lazy"
+              densities={[1, 2]} decoding="async"
             />
           </div>
         </a>
@@ -28,16 +33,16 @@ const currentYear = new Date().getFullYear();
         <h3 class="text-white font-semibold text-sm uppercase tracking-wider mb-4">Navigation</h3>
         <ul class="space-y-3">
           <li>
-            <a href="/" class="text-sm text-white/70 hover:text-accent transition-colors duration-300">Startseite</a>
+            <a href="/" class="text-sm text-white/70 hover:text-white transition-colors duration-300">Startseite</a>
           </li>
           <li>
-            <a href="/leistungen" class="text-sm text-white/70 hover:text-accent transition-colors duration-300">Leistungen</a>
+            <a href="/leistungen" class="text-sm text-white/70 hover:text-white transition-colors duration-300">Leistungen</a>
           </li>
           <li>
-            <a href="/ueber-uns" class="text-sm text-white/70 hover:text-accent transition-colors duration-300">Über Uns</a>
+            <a href="/ueber-uns" class="text-sm text-white/70 hover:text-white transition-colors duration-300">Über Uns</a>
           </li>
           <li>
-            <a href="/kontakt" class="text-sm text-white/70 hover:text-accent transition-colors duration-300">Kontakt</a>
+            <a href="/kontakt" class="text-sm text-white/70 hover:text-white transition-colors duration-300">Kontakt</a>
           </li>
         </ul>
       </div>
@@ -74,10 +79,10 @@ const currentYear = new Date().getFullYear();
         <h3 class="text-white font-semibold text-sm uppercase tracking-wider mb-4">Rechtliches</h3>
         <ul class="space-y-3">
           <li>
-            <a href="/impressum" class="text-sm text-white/70 hover:text-accent transition-colors duration-300">Impressum</a>
+            <a href="/impressum" class="text-sm text-white/70 hover:text-white transition-colors duration-300">Impressum</a>
           </li>
           <li>
-            <a href="/datenschutz" class="text-sm text-white/70 hover:text-accent transition-colors duration-300">Datenschutz</a>
+            <a href="/datenschutz" class="text-sm text-white/70 hover:text-white transition-colors duration-300">Datenschutz</a>
           </li>
         </ul>
         <div class="mt-6 pt-6 border-t border-white/10">
@@ -93,7 +98,7 @@ const currentYear = new Date().getFullYear();
   <!-- Bottom Bar -->
   <div class="border-t border-white/10">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6">
-      <p class="text-center text-xs text-white/50">
+      <p class="text-center text-xs text-white/70">
         © {currentYear} Montagebau Fabian – Manuela Fabian. Alle Rechte vorbehalten.
       </p>
     </div>

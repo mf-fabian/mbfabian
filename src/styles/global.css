@@ -3,7 +3,7 @@
 @theme {
   /* Brand Colors mapped from CSS custom properties */
   --color-primary: #25383c;
-  --color-accent: #a47e51;
+  --color-accent: #8a6a42;
   --color-bg: #ffffff;
   --color-text: #1a1a1a;
   --color-text-light: #4a4a4a;
@@ -22,7 +22,7 @@
 /* CSS Custom Properties for global access */
 :root {
   --color-primary: #25383c;
-  --color-accent: #a47e51;
+  --color-accent: #8a6a42;
   --color-bg: #ffffff;
   --color-text: #1a1a1a;
   --color-text-light: #4a4a4a;
@@ -49,6 +49,18 @@ body {
 :focus-visible {
   outline: 2px solid var(--color-accent);
   outline-offset: 2px;
+}
+
+/* Respect user motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 /* Selection color */

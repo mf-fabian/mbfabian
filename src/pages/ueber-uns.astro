@@ -1,5 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import uberunsImage from '../assets/uberuns.jpeg';
 ---
 
 <Layout 
@@ -26,11 +28,13 @@ import Layout from '../layouts/Layout.astro';
         <!-- Image -->
         <div>
           <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-border shadow-lg">
-            <img 
-              src="/uberuns.jpeg" 
+            <Image 
+              src={uberunsImage} 
               alt="Montagebau Fabian Logo auf der Arbeitsjacke des Teams" 
               class="w-full h-full object-cover"
+              width={800}
               loading="lazy"
+              densities={[1, 2]} decoding="async"
             />
           </div>
         </div>

@@ -1,0 +1,16 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Seite nicht gefunden" description="Die angeforderte Seite konnte nicht gefunden werden." noindex={true}>
+  <section class="py-20 lg:py-28 bg-bg text-center" aria-labelledby="error-heading">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <h1 id="error-heading" class="text-6xl font-bold text-primary mb-4">404</h1>
+      <h2 class="text-2xl font-semibold text-text-light mb-6">Seite nicht gefunden</h2>
+      <p class="text-text-muted mb-8 max-w-md mx-auto">Die von Ihnen gesuchte Seite existiert nicht oder wurde verschoben.</p>
+      <a href="/" class="inline-flex items-center gap-2 bg-accent text-white px-6 py-3 rounded font-medium transition-all hover:bg-accent/90">
+        Zurück zur Startseite
+      </a>
+    </div>
+  </section>
+</Layout>

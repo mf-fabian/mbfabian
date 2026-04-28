@@ -1,5 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import heroImage from '../assets/hero.jpeg';
+import tuerImage from '../assets/tuer.jpg';
+import fensterImage from '../assets/fenster.jpg';
+import zaunImage from '../assets/zaun.jpg';
+import qualitaetTeamImage from '../assets/qualitaet-team.jpg';
 ---
 
 <Layout 
@@ -10,11 +16,14 @@ import Layout from '../layouts/Layout.astro';
   <section class="relative bg-primary overflow-hidden min-h-[600px] lg:min-h-[700px] flex items-center" aria-labelledby="hero-heading">
     <!-- Background Image -->
     <div class="absolute inset-0">
-      <img 
-        src="/hero.jpeg" 
+      <Image 
+        src={heroImage} 
         alt="Moderne Haustür Montagebau Fabian" 
         class="w-full h-full object-cover"
+        width={1400}
         loading="eager"
+        fetchpriority="high"
+        densities={[1, 2]} decoding="async"
       />
       <div class="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/80 to-primary/60"></div>
     </div>
@@ -80,11 +89,13 @@ import Layout from '../layouts/Layout.astro';
         <!-- Card 1: Türen & Tore -->
         <article class="group bg-white rounded-xl border border-border overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
           <div class="aspect-[4/3] overflow-hidden">
-            <img 
-              src="/tuer.jpg" 
+            <Image 
+              src={tuerImage} 
               alt="Haustüren von Montagebau Fabian" 
               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              width={800}
               loading="lazy"
+              densities={[1, 2]} decoding="async"
             />
           </div>
           <div class="p-8">
@@ -104,11 +115,13 @@ import Layout from '../layouts/Layout.astro';
         <!-- Card 2: Fenster & Überdachungen -->
         <article class="group bg-white rounded-xl border border-border overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
           <div class="aspect-[4/3] overflow-hidden">
-            <img 
-              src="/fenster.jpg" 
+            <Image 
+              src={fensterImage} 
               alt="Fenster und Glasfronten von Montagebau Fabian" 
               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              width={800}
               loading="lazy"
+              densities={[1, 2]} decoding="async"
             />
           </div>
           <div class="p-8">
@@ -128,11 +141,13 @@ import Layout from '../layouts/Layout.astro';
         <!-- Card 3: Zäune -->
         <article class="group bg-white rounded-xl border border-border overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
           <div class="aspect-[4/3] overflow-hidden">
-            <img 
-              src="/zaun.jpg" 
+            <Image 
+              src={zaunImage} 
               alt="Zaunanlagen von Montagebau Fabian" 
               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              width={800}
               loading="lazy"
+              densities={[1, 2]} decoding="async"
             />
           </div>
           <div class="p-8">
@@ -159,11 +174,13 @@ import Layout from '../layouts/Layout.astro';
         <!-- Image Side -->
         <div class="relative">
           <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-border shadow-lg">
-            <img 
-              src="/qualitaet-team.jpg" 
+            <Image 
+              src={qualitaetTeamImage} 
               alt="Team von Montagebau Fabian bei der Arbeit" 
               class="w-full h-full object-cover"
+              width={800}
               loading="lazy"
+              densities={[1, 2]} decoding="async"
             />
           </div>
           <!-- Experience Badge -->

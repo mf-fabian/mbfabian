@@ -180,6 +180,7 @@ const web3formsKey = import.meta.env.PUBLIC_WEB3FORMS_KEY || '';
                   minlength="2"
                   class="w-full px-4 py-3 rounded-lg border border-border bg-surface text-text placeholder-text-muted focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all"
                   placeholder="Ihr vollständiger Name"
+                  autocomplete="name"
                   aria-required="true"
                 />
                 <p class="hidden text-sm text-red-600 mt-1" id="name-error">Bitte geben Sie Ihren Namen ein.</p>
@@ -197,6 +198,7 @@ const web3formsKey = import.meta.env.PUBLIC_WEB3FORMS_KEY || '';
                   required
                   class="w-full px-4 py-3 rounded-lg border border-border bg-surface text-text placeholder-text-muted focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all"
                   placeholder="ihre.email@beispiel.de"
+                  autocomplete="email"
                   aria-required="true"
                 />
                 <p class="hidden text-sm text-red-600 mt-1" id="email-error">Bitte geben Sie eine gültige E-Mail-Adresse ein.</p>
@@ -213,6 +215,7 @@ const web3formsKey = import.meta.env.PUBLIC_WEB3FORMS_KEY || '';
                   name="phone" 
                   class="w-full px-4 py-3 rounded-lg border border-border bg-surface text-text placeholder-text-muted focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all"
                   placeholder="0151 12345678"
+                  autocomplete="tel"
                 />
               </div>
 

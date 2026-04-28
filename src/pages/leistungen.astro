@@ -1,5 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import tuerImage from '../assets/tuer.jpg';
+import toreImage from '../assets/tore.jpg';
+import fensterImage from '../assets/fenster.jpg';
+import terasseImage from '../assets/terasse.jpg';
+import zaunImage from '../assets/zaun.jpg';
 ---
 
 <Layout 
@@ -26,11 +32,13 @@ import Layout from '../layouts/Layout.astro';
         <!-- Image -->
         <div class="order-1">
           <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-border shadow-lg">
-            <img 
-              src="/tuer.jpg" 
+            <Image 
+              src={tuerImage} 
               alt="Moderne Haustür montiert von Montagebau Fabian" 
               class="w-full h-full object-cover"
+              width={800}
               loading="lazy"
+              densities={[1, 2]} decoding="async"
             />
           </div>
         </div>
@@ -170,11 +178,13 @@ import Layout from '../layouts/Layout.astro';
         <!-- Image -->
         <div class="order-1 lg:order-2">
           <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-border shadow-lg">
-            <img 
-              src="/tore.jpg" 
+            <Image 
+              src={toreImage} 
               alt="Brandschutzschiebetor montiert von Montagebau Fabian" 
               class="w-full h-full object-cover"
+              width={800}
               loading="lazy"
+              densities={[1, 2]} decoding="async"
             />
           </div>
         </div>
@@ -189,11 +199,13 @@ import Layout from '../layouts/Layout.astro';
         <!-- Image -->
         <div class="order-1">
           <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-border shadow-lg">
-            <img 
-              src="/fenster.jpg" 
+            <Image 
+              src={fensterImage} 
               alt="Großflächige Fensterfront montiert von Montagebau Fabian" 
               class="w-full h-full object-cover"
+              width={800}
               loading="lazy"
+              densities={[1, 2]} decoding="async"
             />
           </div>
         </div>
@@ -345,11 +357,13 @@ import Layout from '../layouts/Layout.astro';
         <!-- Image -->
         <div class="order-1 lg:order-2">
           <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-border shadow-lg">
-            <img 
-              src="/terasse.jpg" 
+            <Image 
+              src={terasseImage} 
               alt="Terassenüberdachung mit Glasscheiben montiert von Montagebau Fabian" 
               class="w-full h-full object-cover"
+              width={800}
               loading="lazy"
+              densities={[1, 2]} decoding="async"
             />
           </div>
         </div>
@@ -364,11 +378,13 @@ import Layout from '../layouts/Layout.astro';
         <!-- Image -->
         <div class="order-1">
           <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-border shadow-lg">
-            <img 
-              src="/zaun.jpg" 
+            <Image 
+              src={zaunImage} 
               alt="Zaunanlage montiert von Montagebau Fabian" 
               class="w-full h-full object-cover"
+              width={800}
               loading="lazy"
+              densities={[1, 2]} decoding="async"
             />
           </div>
         </div>
