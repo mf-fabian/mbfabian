@@ -1,0 +1,130 @@
+---
+export interface Props {
+  title?: string;
+  description?: string;
+  canonical?: string;
+  ogImage?: string;
+  noindex?: boolean;
+}
+
+const {
+  title = "Montagebau Fabian | Premium Montagebau & Bauelemente seit 2008",
+  description = "Montagebau Fabian – Ihr erfahrener Partner für Türen, Tore, Fenster, Überdachungen und Zäune. Verkauf & Montage aus einer Hand. Auch im Notfall für Sie da. ➤ Jetzt beraten lassen!",
+  canonical = Astro.url.href,
+  ogImage = "/og-image.jpg",
+  noindex = false,
+} = Astro.props;
+
+const siteName = "Montagebau Fabian";
+const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Montagebau Fabian",
+  "image": ogImage,
+  "url": Astro.site?.toString() || "https://montagebau-fabian.de",
+  "telephone": "+4915156081392",
+  "email": "montagebau-fabian@gmx.de",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Am Dohrbaum 5",
+    "addressLocality": "Schwerte",
+    "postalCode": "58239",
+    "addressCountry": "DE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 51.4456,
+    "longitude": 7.5665
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "Manuela Fabian"
+  },
+  "foundingDate": "2008",
+  "priceRange": "€€",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "17:00"
+    }
+  ],
+  "areaServed": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": 51.4456,
+      "longitude": 7.5665
+    },
+    "geoRadius": "50000"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Bauelemente & Montage",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Türen & Tore",
+          "description": "Brandschutztüren, Garagensektionaltore, Haustüren, Rolltore, Zimmertüren, Industrie-Sektional-Rolltore, Mehrzwecktüren, Brandschutzschiebetore"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Fenster & Überdachungen",
+          "description": "Fenster, Terassenüberdachungen, Rolladen, Lamellendächer, Insektenschutz, Vordächer, Sonnenschutz, Carports"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Zäune",
+          "description": "Aluminiumplankenzäune, Sandwichplatten, Doppelstabmatten"
+        }
+      }
+    ]
+  }
+};
+---
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<title>{fullTitle}</title>
+<meta name="description" content={description} />
+<meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow"} />
+<link rel="canonical" href={canonical} />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content={canonical} />
+<meta property="og:title" content={fullTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={ogImage} />
+<meta property="og:site_name" content={siteName} />
+<meta property="og:locale" content="de_DE" />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={canonical} />
+<meta property="twitter:title" content={fullTitle} />
+<meta property="twitter:description" content={description} />
+<meta property="twitter:image" content={ogImage} />
+
+<!-- Favicons -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+<!-- Theme Color -->
+<meta name="theme-color" content="#25383c" />
+
+<!-- Schema.org JSON-LD -->
+<script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />

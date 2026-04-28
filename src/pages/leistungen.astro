@@ -1,0 +1,450 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout 
+  title="Unsere Leistungen"
+  description="Entdecken Sie das komplette Leistungsspektrum von Montagebau Fabian: Türen, Tore, Fenster, Terassenüberdachungen und Zäune. Verkauf und Montage aus einer Hand."
+>
+  <!-- HERO SECTION -->
+  <section class="bg-primary py-20 lg:py-28" aria-labelledby="services-hero-heading">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+      <h1 id="services-hero-heading" class="text-4xl sm:text-5xl font-bold text-white mb-6">
+        Unsere Leistungen
+      </h1>
+      <p class="text-lg text-white/80 max-w-3xl mx-auto leading-relaxed">
+        Von der Beratung über den Verkauf bis zur professionellen Montage – wir sind Ihr kompetenter Partner 
+        für hochwertige Bauelemente. Entdecken Sie unser breites Leistungsspektrum.
+      </p>
+    </div>
+  </section>
+
+  <!-- SEKTION 1: TÜREN -->
+  <section id="tueren" class="py-20 lg:py-28 bg-bg" aria-labelledby="tueren-heading">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <!-- Image -->
+        <div class="order-1">
+          <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-border shadow-lg">
+            <img 
+              src="/tuer.jpg" 
+              alt="Moderne Haustür montiert von Montagebau Fabian" 
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <!-- Text -->
+        <div class="order-2">
+          <span class="text-accent font-semibold text-sm uppercase tracking-wider">Leistungsbereich 01</span>
+          <h2 id="tueren-heading" class="text-3xl sm:text-4xl font-bold text-primary mt-2 mb-6">
+            Türen
+          </h2>
+          <p class="text-text-light leading-relaxed mb-8">
+            Sicherheit, Ästhetik und Funktionalität vereint. Wir montieren Türen für jeden Anspruch – 
+            vom eleganten Wohnungseingang bis zur zertifizierten Brandschutzlösung für Industrie und Gewerbe.
+          </p>
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="flex items-start gap-3 p-4 bg-surface rounded-lg border border-border">
+              <div class="w-8 h-8 bg-accent/10 rounded flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 21V7l8-4 8 4v14"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-primary text-sm">Haustüren</h3>
+                <p class="text-xs text-text-muted">Eingangsbereiche mit Charakter und Sicherheit</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-3 p-4 bg-surface rounded-lg border border-border">
+              <div class="w-8 h-8 bg-accent/10 rounded flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-primary text-sm">Zimmertüren</h3>
+                <p class="text-xs text-text-muted">Stilvolle Trennung für Ihre Wohnräume</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-3 p-4 bg-surface rounded-lg border border-border">
+              <div class="w-8 h-8 bg-accent/10 rounded flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-primary text-sm">Brandschutztüren</h3>
+                <p class="text-xs text-text-muted">Zertifizierte Sicherheit für Gewerbe</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-3 p-4 bg-surface rounded-lg border border-border">
+              <div class="w-8 h-8 bg-accent/10 rounded flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect width="18" height="18" x="3" y="3" rx="2"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-primary text-sm">Mehrzwecktüren</h3>
+                <p class="text-xs text-text-muted">Vielseitig einsetzbar</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEKTION 2: TORE -->
+  <section id="tore" class="py-20 lg:py-28 bg-surface" aria-labelledby="tore-heading">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <!-- Text -->
+        <div class="order-2 lg:order-1">
+          <span class="text-accent font-semibold text-sm uppercase tracking-wider">Leistungsbereich 02</span>
+          <h2 id="tore-heading" class="text-3xl sm:text-4xl font-bold text-primary mt-2 mb-6">
+            Tore
+          </h2>
+          <p class="text-text-light leading-relaxed mb-8">
+            Von der Garage bis zur Industriehalle – wir montieren Tore, die zuverlässig funktionieren, 
+            sicher schließen und optisch überzeugen. Als Partner führender Hersteller garantieren wir 
+            höchste Qualität bei jedem Projekt.
+          </p>
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="flex items-start gap-3 p-4 bg-white rounded-lg border border-border">
+              <div class="w-8 h-8 bg-accent/10 rounded flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-primary text-sm">Garagensektionaltore</h3>
+                <p class="text-xs text-text-muted">Platzsparend und individuell gestaltbar</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-3 p-4 bg-white rounded-lg border border-border">
+              <div class="w-8 h-8 bg-accent/10 rounded flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-primary text-sm">Rolltore</h3>
+                <p class="text-xs text-text-muted">Robuste Lösungen für Gewerbe</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-3 p-4 bg-white rounded-lg border border-border">
+              <div class="w-8 h-8 bg-accent/10 rounded flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M15 21V9"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-primary text-sm">Industrie-Sektional-Rolltore</h3>
+                <p class="text-xs text-text-muted">Hochbelastbar für Produktion</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-3 p-4 bg-white rounded-lg border border-border">
+              <div class="w-8 h-8 bg-accent/10 rounded flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-primary text-sm">Brandschutzschiebetore</h3>
+                <p class="text-xs text-text-muted">Sicherheit bei großen Durchfahrten</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image -->
+        <div class="order-1 lg:order-2">
+          <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-border shadow-lg">
+            <img 
+              src="/tore.jpg" 
+              alt="Brandschutzschiebetor montiert von Montagebau Fabian" 
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEKTION 3: FENSTER -->
+  <section id="fenster" class="py-20 lg:py-28 bg-bg" aria-labelledby="fenster-heading">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <!-- Image -->
+        <div class="order-1">
+          <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-border shadow-lg">
+            <img 
+              src="/fenster.jpg" 
+              alt="Großflächige Fensterfront montiert von Montagebau Fabian" 
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <!-- Text -->
+        <div class="order-2">
+          <span class="text-accent font-semibold text-sm uppercase tracking-wider">Leistungsbereich 03</span>
+          <h2 id="fenster-heading" class="text-3xl sm:text-4xl font-bold text-primary mt-2 mb-6">
+            Fenster
+          </h2>
+          <p class="text-text-light leading-relaxed mb-8">
+            Mehr Wohnkomfort, bessere Energieeffizienz und stilvolle Gestaltung – unsere Fensterlösungen 
+            verschönern Ihr Zuhause und senken Ihre Energiekosten. Vom klassischen Wohnungsfenster bis zur 
+            großflächigen Glasfront für Gewerbeobjekte.
+          </p>
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="flex items-start gap-3 p-4 bg-surface rounded-lg border border-border">
+              <div class="w-8 h-8 bg-accent/10 rounded flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-primary text-sm">Fenster</h3>
+                <p class="text-xs text-text-muted">Energieeffizient für Neubau &amp; Modernisierung</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-3 p-4 bg-surface rounded-lg border border-border">
+              <div class="w-8 h-8 bg-accent/10 rounded flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-primary text-sm">Rolladen</h3>
+                <p class="text-xs text-text-muted">Schutz vor Sonne, Lärm und Einblicken</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-3 p-4 bg-surface rounded-lg border border-border">
+              <div class="w-8 h-8 bg-accent/10 rounded flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-primary text-sm">Insektenschutz</h3>
+                <p class="text-xs text-text-muted">Unsichtbarer Schutz für Fenster und Türen</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-3 p-4 bg-surface rounded-lg border border-border">
+              <div class="w-8 h-8 bg-accent/10 rounded flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 21V7l8-4 8 4v14"/><path d="M10 21V9"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-primary text-sm">Vordächer</h3>
+                <p class="text-xs text-text-muted">Stilvoller Wetterschutz am Eingang</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-3 p-4 bg-surface rounded-lg border border-border">
+              <div class="w-8 h-8 bg-accent/10 rounded flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="5"/><path d="M12 1v2"/><path d="M12 21v2"/><path d="M4.22 4.22l1.42 1.42"/><path d="M18.36 18.36l1.42 1.42"/><path d="M1 12h2"/><path d="M21 12h2"/><path d="M4.22 19.78l1.42-1.42"/><path d="M18.36 5.64l1.42-1.42"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-primary text-sm">Sonnenschutz</h3>
+                <p class="text-xs text-text-muted">Markisen, Raffstores und Screens</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-3 p-4 bg-surface rounded-lg border border-border">
+              <div class="w-8 h-8 bg-accent/10 rounded flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M3 21h18"/><path d="M5 21V7l8-4 8 4v14"/><path d="M14 7v5"/><path d="M10 7v5"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-primary text-sm">Carports</h3>
+                <p class="text-xs text-text-muted">Schutz für Ihr Fahrzeug</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEKTION 4: TERASSENÜBERDACHUNGEN -->
+  <section id="terassenueberdachungen" class="py-20 lg:py-28 bg-surface" aria-labelledby="terassen-heading">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <!-- Text -->
+        <div class="order-2 lg:order-1">
+          <span class="text-accent font-semibold text-sm uppercase tracking-wider">Leistungsbereich 04</span>
+          <h2 id="terassen-heading" class="text-3xl sm:text-4xl font-bold text-primary mt-2 mb-6">
+            Terassenüberdachungen
+          </h2>
+          <p class="text-text-light leading-relaxed mb-8">
+            Verlängern Sie Ihre Wohnsaison nach draußen. Wir montieren wetterfeste Überdachungen und 
+            flexible Beschattungssysteme, die Ihre Terrasse zum ganzjährigen Wohlfühlort machen.
+          </p>
+          
+          <div class="space-y-4">
+            <div class="flex items-start gap-3 p-4 bg-white rounded-lg border border-border">
+              <div class="w-8 h-8 bg-accent/10 rounded flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M3 21h18"/><path d="M5 21V7l8-4 8 4v14"/><path d="M14 7v5"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-primary text-sm">Terassenüberdachungen</h3>
+                <p class="text-xs text-text-muted">Wettergeschützte Freiluftoasen für Ihren Garten</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-3 p-4 bg-white rounded-lg border border-border">
+              <div class="w-8 h-8 bg-accent/10 rounded flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M3 3v18h18"/><path d="M7 16V8"/><path d="M11 16V8"/><path d="M15 16v-4"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-primary text-sm">Lamellendächer</h3>
+                <p class="text-xs text-text-muted">Flexibel steuerbar aus Aluminium oder Holz</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-3 p-4 bg-white rounded-lg border border-border">
+              <div class="w-8 h-8 bg-accent/10 rounded flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="5"/><path d="M12 1v2"/><path d="M12 21v2"/><path d="M4.22 4.22l1.42 1.42"/><path d="M18.36 18.36l1.42 1.42"/><path d="M1 12h2"/><path d="M21 12h2"/><path d="M4.22 19.78l1.42-1.42"/><path d="M18.36 5.64l1.42-1.42"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-primary text-sm">Beschattung</h3>
+                <p class="text-xs text-text-muted">Individuelle Schattierung für jeden Bedarf</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image -->
+        <div class="order-1 lg:order-2">
+          <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-border shadow-lg">
+            <img 
+              src="/terasse.jpg" 
+              alt="Terassenüberdachung mit Glasscheiben montiert von Montagebau Fabian" 
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEKTION 5: ZÄUNE -->
+  <section id="zaeune" class="py-20 lg:py-28 bg-bg" aria-labelledby="zaeune-heading">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <!-- Image -->
+        <div class="order-1">
+          <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-border shadow-lg">
+            <img 
+              src="/zaun.jpg" 
+              alt="Zaunanlage montiert von Montagebau Fabian" 
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <!-- Text -->
+        <div class="order-2">
+          <span class="text-accent font-semibold text-sm uppercase tracking-wider">Leistungsbereich 05</span>
+          <h2 id="zaeune-heading" class="text-3xl sm:text-4xl font-bold text-primary mt-2 mb-6">
+            Zäune
+          </h2>
+          <p class="text-text-light leading-relaxed mb-8">
+            Ein guter Zaun schützt, grenzt ab und verschönert Ihr Grundstück. Wir montieren hochwertige 
+            Zaunanlagen für Privatanwender und Gewerbekunden – stabil, langlebig und optisch ansprechend.
+          </p>
+          
+          <div class="space-y-4">
+            <div class="flex items-start gap-3 p-4 bg-surface rounded-lg border border-border">
+              <div class="w-8 h-8 bg-accent/10 rounded flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-primary text-sm">Aluminiumplankenzäune</h3>
+                <p class="text-xs text-text-muted">Moderne Optik, maximale Langlebigkeit</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-3 p-4 bg-surface rounded-lg border border-border">
+              <div class="w-8 h-8 bg-accent/10 rounded flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M3 3v18h18"/><path d="M7 16V8"/><path d="M11 16V8"/><path d="M15 16v-4"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-primary text-sm">Sandwichplatten</h3>
+                <p class="text-xs text-text-muted">Solide Sichtschutzlösungen mit hoher Stabilität</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-3 p-4 bg-surface rounded-lg border border-border">
+              <div class="w-8 h-8 bg-accent/10 rounded flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M3 3v18h18"/><path d="M7 16V8"/><path d="M11 16V8"/><path d="M15 16v-4"/><path d="M19 16v-6"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-primary text-sm">Doppelstabmatten</h3>
+                <p class="text-xs text-text-muted">Kostengünstig, robust und vielseitig</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="py-16 lg:py-20 bg-primary" aria-labelledby="project-cta-heading">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+      <h2 id="project-cta-heading" class="text-3xl sm:text-4xl font-bold text-white mb-4">
+        Planen Sie ein Projekt?
+      </h2>
+      <p class="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
+        Ob Neubau, Renovierung oder einzelne Bauelemente – wir beraten Sie gerne persönlich 
+        und erstellen Ihnen ein individuelles Angebot.
+      </p>
+      <a 
+        href="/kontakt" 
+        class="inline-flex items-center justify-center gap-2 bg-accent text-white px-8 py-4 rounded font-semibold text-base transition-all duration-300 hover:bg-accent/90 hover:scale-105 shadow-lg hover:shadow-xl"
+      >
+        Lassen Sie uns sprechen
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+  </section>
+</Layout>

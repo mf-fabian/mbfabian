@@ -1,0 +1,275 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout 
+  title="Über Uns"
+  description="Lernen Sie Montagebau Fabian kennen. Seit 2008 steht Manuela Fabian für Qualität, Zuverlässigkeit und persönlichen Service im Montagebau. Erfahrener Partner von Hörmann, DMW Schwarze, EGE und Jotec."
+>
+  <!-- HERO SECTION -->
+  <section class="bg-primary py-20 lg:py-28" aria-labelledby="about-hero-heading">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+      <h1 id="about-hero-heading" class="text-4xl sm:text-5xl font-bold text-white mb-6">
+        Über Montagebau Fabian
+      </h1>
+      <p class="text-lg text-white/80 max-w-3xl mx-auto leading-relaxed">
+        Ein Familienunternehmen mit Herz, Handwerk und dem Anspruch, jedes Projekt so zu erledigen, 
+        als wäre es unser eigenes.
+      </p>
+    </div>
+  </section>
+
+  <!-- STORY SECTION -->
+  <section class="py-20 lg:py-28 bg-bg" aria-labelledby="story-heading">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <!-- Image -->
+        <div>
+          <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-border shadow-lg">
+            <img 
+              src="/uberuns.jpeg" 
+              alt="Montagebau Fabian Logo auf der Arbeitsjacke des Teams" 
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <!-- Text -->
+        <div>
+          <span class="text-accent font-semibold text-sm uppercase tracking-wider">Unsere Geschichte</span>
+          <h2 id="story-heading" class="text-3xl sm:text-4xl font-bold text-primary mt-2 mb-6">
+            Von der Vision zum verlässlichen Partner
+          </h2>
+          <div class="space-y-4 text-text-light leading-relaxed">
+            <p>
+              Montagebau Fabian wurde im Jahr 2008 von <strong>Manuela Fabian</strong> gegründet – 
+              mit dem Ziel, Montageleistungen auf höchstem Niveau zu liefern. Von Anfang an lag der 
+              Fokus auf professioneller Ausführung, Termintreue und der Fähigkeit, auch große 
+              Projekte souverän zu meistern.
+            </p>
+            <p>
+              Über die Jahre haben wir uns zu einem gefragten Partner für führende Hersteller 
+              entwickelt. Wir arbeiten nicht nur vor Ort, sondern jahrelang erfolgreich als 
+              Subunternehmer für Unternehmen wie <strong>DMW Schwarze, Hörmann KG, EGE</strong> 
+              und <strong>Jotec</strong>. Diese langjährigen Kooperationen sind der beste 
+              Beweis für unsere Zuverlässigkeit und fachliche Exzellenz.
+            </p>
+            <p>
+              Unsere Stärke liegt in der präzisen Montage komplexer Bauelemente – von 
+              Industrietoren über Brandschutzsysteme bis hin zu großflächigen Fensterfronten. 
+              Dabei halten wir stets die Vorgaben der Hersteller ein und garantieren eine 
+              termingerechte, qualitativ einwandfreie Umsetzung.
+            </p>
+            <p>
+              Besonders wichtig ist uns auch der <strong>Notfallservice</strong>. Ein defektes Tor 
+              oder eine klemmende Tür kann den Betrieb massiv stören. Deshalb reagieren wir in 
+              solchen Fällen schnell und unkompliziert – damit bei Ihnen wieder alles reibungslos 
+              läuft.
+            </p>
+          </div>
+          
+          <!-- Stats -->
+          <div class="grid grid-cols-3 gap-6 mt-10 pt-10 border-t border-border">
+            <div class="text-center">
+              <span class="text-3xl font-bold text-accent">15+</span>
+              <p class="text-sm text-text-muted mt-1">Jahre Erfahrung</p>
+            </div>
+            <div class="text-center">
+              <span class="text-3xl font-bold text-accent">10</span>
+              <p class="text-sm text-text-muted mt-1">Partner-Hersteller</p>
+            </div>
+            <div class="text-center">
+              <span class="text-3xl font-bold text-accent">∞</span>
+              <p class="text-sm text-text-muted mt-1">Engagement</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTNER SECTION -->
+  <section class="py-20 lg:py-28 bg-surface" aria-labelledby="partner-heading">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="text-accent font-semibold text-sm uppercase tracking-wider">Starke Partnerschaften</span>
+        <h2 id="partner-heading" class="text-3xl sm:text-4xl font-bold text-primary mt-2 mb-4">
+          Autorität durch Kooperation
+        </h2>
+        <p class="text-lg text-text-muted max-w-3xl mx-auto">
+          Als Subunternehmer führender Hersteller arbeiten wir nach höchsten Qualitätsstandards. 
+          Diese Partnerschaften garantieren Ihnen erstklassige Produkte und fachgerechte Montage.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Partner 1: DMW Schwarze -->
+        <article class="bg-white rounded-xl p-8 border border-border transition-all duration-300 hover:shadow-lg">
+          <div class="flex items-center gap-4 mb-4">
+            <!-- TODO: DMW Schwarze Logo einfügen -->
+            <div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center">
+              <span class="text-primary font-bold text-xl">DMW</span>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-primary">DMW Schwarze</h3>
+              <span class="text-sm text-accent font-medium">Spezialist für Tore und Antriebstechnik</span>
+            </div>
+          </div>
+          <p class="text-text-light leading-relaxed">
+            DMW Schwarze ist ein erfahrener Hersteller im Bereich Tore und Antriebe. Als Subunternehmer 
+            realisieren wir Montagen von DMW-Produkten mit der Präzision und Sorgfalt, die diese 
+            hochwertigen Systeme verdienen.
+          </p>
+        </article>
+
+        <!-- Partner 2: Jotec -->
+        <article class="bg-white rounded-xl p-8 border border-border transition-all duration-300 hover:shadow-lg">
+          <div class="flex items-center gap-4 mb-4">
+            <!-- TODO: Jotec Logo einfügen -->
+            <div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center">
+              <span class="text-primary font-bold text-xl">JT</span>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-primary">Jotec</h3>
+              <span class="text-sm text-accent font-medium">Technologie für Tore und Türen</span>
+            </div>
+          </div>
+          <p class="text-text-light leading-relaxed">
+            Jotec entwickelt hochwertige Technologie für den Tor- und Tür-Bereich. Als Montagepartner 
+            sorgen wir dafür, dass diese technologisch anspruchsvollen Produkte perfekt verbaut 
+            und voll funktionsfähig an die Kunden übergeben werden.
+          </p>
+        </article>
+
+        <!-- Partner 3: Terasse 2000 -->
+        <article class="bg-white rounded-xl p-8 border border-border transition-all duration-300 hover:shadow-lg">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center">
+              <span class="text-primary font-bold text-xl">T2K</span>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-primary">Terasse 2000</h3>
+              <span class="text-sm text-accent font-medium">Terassenüberdachungen und Beschattung</span>
+            </div>
+          </div>
+          <p class="text-text-light leading-relaxed">
+            Terasse 2000 steht für innovative Überdachungslösungen und intelligente Beschattungssysteme. 
+            Als Montagepartner realisieren wir deren Projekte fachgerecht vor Ort – von der ersten 
+            Montage bis zur finalen Abnahme.
+          </p>
+        </article>
+
+        <!-- Partner 4: Arnhold Fenster u. Haustüren -->
+        <article class="bg-white rounded-xl p-8 border border-border transition-all duration-300 hover:shadow-lg">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center">
+              <span class="text-primary font-bold text-xl">AF</span>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-primary">Arnhold Fenster u. Haustüren</h3>
+              <span class="text-sm text-accent font-medium">Fenster, Haustüren und Zubehör</span>
+            </div>
+          </div>
+          <p class="text-text-light leading-relaxed">
+            Arnhold ist ein erfahrener Spezialist für hochwertige Fenster und Haustüren. Wir montieren 
+            deren Produkte mit höchster Präzision und sorgen dafür, dass jede Einbauarbeit den 
+            Qualitätsansprüchen des Herstellers und der Kunden gerecht wird.
+          </p>
+        </article>
+
+        <!-- Partner 5: Teckentrup -->
+        <article class="bg-white rounded-xl p-8 border border-border transition-all duration-300 hover:shadow-lg">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center">
+              <span class="text-primary font-bold text-xl">TT</span>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-primary">Teckentrup</h3>
+              <span class="text-sm text-accent font-medium">Tore, Türen und Sicherheitstechnik</span>
+            </div>
+          </div>
+          <p class="text-text-light leading-relaxed">
+            Teckentrup ist ein führender Hersteller für Tore, Türen und Sicherheitstechnik. Als 
+            verlässlicher Montagepartner setzen wir deren anspruchsvolle Produkte termingerecht und 
+            nach höchsten Standards um – von der Industriehalle bis zum Gewerbeobjekt.
+          </p>
+        </article>
+
+        <!-- Partner 6: Klockenkopf -->
+        <article class="bg-white rounded-xl p-8 border border-border transition-all duration-300 hover:shadow-lg">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center">
+              <span class="text-primary font-bold text-xl">KK</span>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-primary">Klockenkopf</h3>
+              <span class="text-sm text-accent font-medium">Bauelemente und Montageservice</span>
+            </div>
+          </div>
+          <p class="text-text-light leading-relaxed">
+            Klockenkopf ist ein erfahrener Partner im Bereich Bauelemente und Montage. Wir arbeiten 
+            eng mit ihnen zusammen und sorgen für eine reibungslose Montage vor Ort – präzise, 
+            termingerecht und mit dem nötigen Know-how für komplexe Bauprojekte.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST / VALUES SECTION -->
+  <section class="py-20 lg:py-28 bg-bg" aria-labelledby="values-heading">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 id="values-heading" class="text-3xl sm:text-4xl font-bold text-primary mb-4">
+          Das macht uns aus
+        </h2>
+        <p class="text-lg text-text-muted max-w-2xl mx-auto">
+          Unsere Arbeit ist geprägt von Werten, die wir jeden Tag aufs Neue leben.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="text-center p-6">
+          <div class="w-14 h-14 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <h3 class="font-semibold text-primary mb-2">Qualität</h3>
+          <p class="text-sm text-text-muted">Jede Montage wird mit höchster Sorgfalt und nach Herstellervorgaben ausgeführt.</p>
+        </div>
+
+        <div class="text-center p-6">
+          <div class="w-14 h-14 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <h3 class="font-semibold text-primary mb-2">Termintreue</h3>
+          <p class="text-sm text-text-muted">Wir halten, was wir versprechen. Pünktlichkeit ist für uns selbstverständlich.</p>
+        </div>
+
+        <div class="text-center p-6">
+          <div class="w-14 h-14 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+          </div>
+          <h3 class="font-semibold text-primary mb-2">Erreichbarkeit</h3>
+          <p class="text-sm text-text-muted">Auch im Notfall sind wir für Sie da. Kurze Reaktionszeiten, schnelle Hilfe.</p>
+        </div>
+
+        <div class="text-center p-6">
+          <div class="w-14 h-14 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <h3 class="font-semibold text-primary mb-2">Persönlichkeit</h3>
+          <p class="text-sm text-text-muted">Bei uns sind Sie kein Fall, sondern Mensch. Persönliche Beratung, individuelle Lösungen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

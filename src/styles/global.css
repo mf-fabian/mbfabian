@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand Colors mapped from CSS custom properties */
+  --color-primary: #25383c;
+  --color-accent: #a47e51;
+  --color-bg: #ffffff;
+  --color-text: #1a1a1a;
+  --color-text-light: #4a4a4a;
+  --color-text-muted: #737373;
+  --color-surface: #f8f9fa;
+  --color-surface-alt: #eef0f1;
+  --color-border: #e2e4e7;
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* Font Families */
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* CSS Custom Properties for global access */
+:root {
+  --color-primary: #25383c;
+  --color-accent: #a47e51;
+  --color-bg: #ffffff;
+  --color-text: #1a1a1a;
+  --color-text-light: #4a4a4a;
+  --color-text-muted: #737373;
+  --color-surface: #f8f9fa;
+  --color-surface-alt: #eef0f1;
+  --color-border: #e2e4e7;
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Focus styles for accessibility */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Selection color */
+::selection {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+}
