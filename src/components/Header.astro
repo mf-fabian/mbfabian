@@ -48,18 +48,18 @@ const currentPath = Astro.url.pathname;
       <a
         href="tel:+4915156081392"
         class="hidden md:inline-flex items-center gap-2 bg-accent text-white px-5 py-2.5 rounded font-medium text-sm transition-all duration-300 hover:bg-accent/90 hover:scale-105 shadow-lg hover:shadow-xl"
-        aria-label="Notdienst anrufen: 0151 56081392"
+        aria-label="Anrufen: 0151 56081392"
       >
         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
         </svg>
-        Notdienst anrufen
+        Jetzt anrufen
       </a>
 
       <!-- Mobile Menu Button -->
       <button
         type="button"
-        class="md:hidden inline-flex items-center justify-center p-2 rounded text-primary hover:text-accent hover:bg-primary/5 transition-colors"
+        class="md:hidden inline-flex items-center justify-center p-3 rounded text-primary hover:text-accent hover:bg-primary/5 transition-colors"
         aria-controls="mobile-menu"
         aria-expanded="false"
         id="mobile-menu-btn"
@@ -97,38 +97,41 @@ const currentPath = Astro.url.pathname;
       <a
         href="tel:+4915156081392"
         class="flex items-center gap-2 mt-4 bg-accent text-white px-4 py-3 rounded font-medium transition-all hover:bg-accent/90"
-        aria-label="Notdienst anrufen: 0151 56081392"
+        aria-label="Anrufen: 0151 56081392"
       >
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
         </svg>
-        Notdienst: 0151 56081392
+        0151 56081392
       </a>
     </div>
   </div>
 </header>
 
 <script>
-  const btn = document.getElementById('mobile-menu-btn');
-  const menu = document.getElementById('mobile-menu');
-  
-  if (btn && menu) {
+  (function() {
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    
+    if (!btn || !menu) return;
+    
     btn.addEventListener('click', () => {
       const isExpanded = btn.getAttribute('aria-expanded') === 'true';
-      btn.setAttribute('aria-expanded', String(!isExpanded));
-      menu.classList.toggle('hidden');
+      const willExpand = !isExpanded;
+      btn.setAttribute('aria-expanded', String(willExpand));
+      menu.classList.toggle('hidden', !willExpand);
       
-      // Update icon
       const svg = btn.querySelector('svg');
-      if (svg) {
-        if (!isExpanded) {
-          svg.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />';
-          btn.setAttribute('aria-label', 'Menü schließen');
-        } else {
-          svg.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />';
-          btn.setAttribute('aria-label', 'Menü öffnen');
-        }
+      if (willExpand) {
+        if (svg) svg.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />';
+        btn.setAttribute('aria-label', 'Menü schließen');
+        const firstLink = menu.querySelector('a');
+        if (firstLink) firstLink.focus();
+      } else {
+        if (svg) svg.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />';
+        btn.setAttribute('aria-label', 'Menü öffnen');
+        btn.focus();
       }
     });
-  }
+  })();
 </script>

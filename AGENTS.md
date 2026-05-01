@@ -1,3 +1,4 @@
+<!-- From: /Users/albinsalihu/Downloads/Montagebau Fabian/mfwebsite/AGENTS.md -->
 # AGENTS.md – Montagebau Fabian Website
 
 > AI coding agent reference for the `mfwebsite` project.
@@ -59,7 +60,8 @@
 │   │   ├── ueber-uns.astro  # About us
 │   │   ├── kontakt.astro    # Contact page + form
 │   │   ├── impressum.astro  # Legal imprint (noindex)
-│   │   └── datenschutz.astro# Privacy policy (noindex)
+│   │   ├── datenschutz.astro# Privacy policy (noindex)
+│   │   └── 404.astro        # Custom 404 page
 │   └── styles/
 │       └── global.css       # Tailwind entry point + CSS custom properties
 ├── astro.config.mjs
@@ -116,12 +118,16 @@ Defined in `.env` (not committed — listed in `.gitignore`):
 - **Tailwind CSS utility classes** are used for 99% of styling.
 - Brand colors are defined as CSS custom properties in `src/styles/global.css` and mapped in `tailwind.config.mjs`:
   - `primary`: `#25383c` (dark teal)
-  - `accent`: `#a47e51` (gold/bronze)
+  - `accent`: `#8a6a42` (gold/bronze)
   - `bg`: `#ffffff`
   - `text`: `#1a1a1a`
+  - `text-light`: `#4a4a4a`
+  - `text-muted`: `#737373`
   - `surface`: `#f8f9fa`
+  - `surface-alt`: `#eef0f1`
   - `border`: `#e2e4e7`
 - Font family: `Inter` (system fallback `ui-sans-serif`).
+- Tailwind v4 uses `@import "tailwindcss"` and `@theme` blocks in `global.css`.
 
 ### Accessibility Patterns
 - All pages use `lang="de"` and `dir="ltr"`.
@@ -130,10 +136,11 @@ Defined in `.env` (not committed — listed in `.gitignore`):
 - `aria-label`, `aria-labelledby`, `aria-expanded`, `aria-current="page"` used consistently.
 - Focus-visible styles: `outline: 2px solid var(--color-accent)`.
 - Images use `loading="eager"` for above-the-fold content and `loading="lazy"` for below-the-fold.
+- `prefers-reduced-motion` media query respects user motion preferences.
 
 ### Language
 - **All user-facing text is German.** When adding new UI text, labels, or aria attributes, use German.
-- TODO comments in the codebase are also written in German (e.g., `<!-- TODO: Ersetzen durch echtes Zaun-Bild -->`).
+- TODO comments in the codebase are also written in German (e.g., `<!-- TODO: DMW Schwarze Logo einfügen -->`).
 
 ---
 
@@ -147,6 +154,7 @@ Defined in `.env` (not committed — listed in `.gitignore`):
 | `/kontakt` | `kontakt.astro` | Contact info + Web3Forms contact form | ✅ index |
 | `/impressum` | `impressum.astro` | German legal imprint | ❌ noindex |
 | `/datenschutz` | `datenschutz.astro` | GDPR privacy policy | ❌ noindex |
+| `/*` | `404.astro` | Custom 404 page | ❌ noindex |
 
 ---
 
@@ -156,19 +164,24 @@ Defined in `.env` (not committed — listed in `.gitignore`):
 - Wraps every page.
 - Props: `title`, `description`, `canonical`, `ogImage`, `noindex`.
 - Imports `SEOHead`, `Header`, `Footer`, `CookieBanner`, and `global.css`.
+- Provides skip link and semantic page structure.
 
 ### `SEOHead.astro`
 - Generates `<meta>`, Open Graph, Twitter Card, canonical, favicon, and theme-color tags.
 - Injects **Schema.org `LocalBusiness` JSON-LD** structured data (hardcoded business info).
-- Default title suffix: `\| Montagebau Fabian`.
+- Default title suffix: `| Montagebau Fabian`.
+- Uses `Astro.site?.origin` for canonical URL generation.
 
 ### `Header.astro`
 - Sticky header with logo, desktop nav, mobile hamburger menu, and emergency call CTA.
 - Mobile menu toggle implemented with vanilla JS inside a `<script>` tag.
+- Uses `astro:assets` `Image` component for optimized logo rendering.
+- Includes `<noscript>` fallback to ensure mobile menu is accessible without JS.
 
 ### `Footer.astro`
 - 4-column footer: logo/about, navigation, contact info, legal links.
 - Displays dynamic year (`new Date().getFullYear()`).
+- Shows tax number and VAT ID.
 
 ### `CookieBanner.astro`
 - Fixed bottom banner for cookie consent.
@@ -185,6 +198,7 @@ Defined in `.env` (not committed — listed in `.gitignore`):
 - Honeypot field (`botcheck`) for spam protection.
 - Success / error states toggled via DOM classes (`hidden`).
 - Loading state disables submit button and shows spinner.
+- Real-time validation clears errors on input.
 
 ---
 
@@ -196,8 +210,11 @@ Defined in `.env` (not committed — listed in `.gitignore`):
 - **Security headers** (configured in `netlify.toml`):
   - `X-Frame-Options: DENY`
   - `X-Content-Type-Options: nosniff`
+  - `X-XSS-Protection: 1; mode=block`
   - `Referrer-Policy: strict-origin-when-cross-origin`
   - `Permissions-Policy` restricts sensors/camera/microphone/etc.
+  - `Strict-Transport-Security: max-age=31536000; includeSubDomains; preload`
+  - `Content-Security-Policy` restricts sources and allows `connect-src` to `https://api.web3forms.com`
 - **Cache headers**: Static assets (`.woff2`, `.css`, `.js`, `.webp`, `.avif`) cached for 1 year.
 
 ---
@@ -220,7 +237,7 @@ Defined in `.env` (not committed — listed in `.gitignore`):
 2. **No external tracking** — no Google Analytics, no social media pixels.
 3. **Contact form** uses Web3Forms (third-party API) — no backend code in this repo.
 4. **Honeypot** spam protection on contact form.
-5. **Security headers** enforced at Netlify edge.
+5. **Security headers** enforced at Netlify edge (CSP, HSTS, frame options, etc.).
 6. **Environment variables** with `PUBLIC_` prefix are embedded in client bundles — do not place secrets here.
 
 ---
@@ -229,7 +246,8 @@ Defined in `.env` (not committed — listed in `.gitignore`):
 
 - **Do not add external tracking or analytics scripts** without explicit consent mechanism updates. The privacy policy and cookie banner explicitly state that no tracking occurs.
 - **Keep all UI text in German.** Even internal labels, alt text, and aria labels should remain German.
-- **Images**: Place new static images in `public/` and reference with root-relative paths (e.g., `/logo.jpg`). There is no image optimization pipeline — consider compressing images before adding them.
+- **Images**: Place new static images in `public/` and reference with root-relative paths (e.g., `/logo.jpg`). For optimized images, place in `src/assets/` and use `astro:assets` `Image` component.
 - **TODOs in codebase**: There are placeholder images and incomplete legal details (e.g., insurance info in `impressum.astro`) marked with `<!-- TODO: ... -->` comments.
 - **No React/Vue/Svelte**: If you need interactivity, use vanilla `<script>` tags inside Astro components or Astro's `client:*` directives (though none are currently used).
 - **Tailwind v4**: Uses `@import "tailwindcss"` and `@theme` blocks in CSS. Do not mix with Tailwind v3 config patterns.
+- **Astro Image component**: When using `<Image>` from `astro:assets`, always provide `width`, `alt`, and consider `densities={[1, 2]}` and `decoding="async"` for performance.

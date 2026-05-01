@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const web3formsKey = import.meta.env.PUBLIC_WEB3FORMS_KEY || '';
+const web3formsKey = import.meta.env.PUBLIC_WEB3FORMS_KEY;
 ---
 
 <Layout 
@@ -182,6 +182,7 @@ const web3formsKey = import.meta.env.PUBLIC_WEB3FORMS_KEY || '';
                   placeholder="Ihr vollständiger Name"
                   autocomplete="name"
                   aria-required="true"
+                  aria-describedby="name-error"
                 />
                 <p class="hidden text-sm text-red-600 mt-1" id="name-error">Bitte geben Sie Ihren Namen ein.</p>
               </div>
@@ -200,6 +201,7 @@ const web3formsKey = import.meta.env.PUBLIC_WEB3FORMS_KEY || '';
                   placeholder="ihre.email@beispiel.de"
                   autocomplete="email"
                   aria-required="true"
+                  aria-describedby="email-error"
                 />
                 <p class="hidden text-sm text-red-600 mt-1" id="email-error">Bitte geben Sie eine gültige E-Mail-Adresse ein.</p>
               </div>
@@ -233,6 +235,7 @@ const web3formsKey = import.meta.env.PUBLIC_WEB3FORMS_KEY || '';
                   class="w-full px-4 py-3 rounded-lg border border-border bg-surface text-text placeholder-text-muted focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all resize-y"
                   placeholder="Beschreiben Sie Ihr Anliegen oder Projekt..."
                   aria-required="true"
+                  aria-describedby="message-error"
                 ></textarea>
                 <p class="hidden text-sm text-red-600 mt-1" id="message-error">Bitte geben Sie eine Nachricht ein (mindestens 10 Zeichen).</p>
               </div>
@@ -246,6 +249,7 @@ const web3formsKey = import.meta.env.PUBLIC_WEB3FORMS_KEY || '';
                   required
                   class="mt-1 w-4 h-4 text-accent border-border rounded focus:ring-accent"
                   aria-required="true"
+                  aria-describedby="privacy-error"
                 />
                 <label for="privacy" class="text-sm text-text-light">
                   Ich habe die <a href="/datenschutz" class="text-accent underline hover:no-underline">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu. <span class="text-accent">*</span>
